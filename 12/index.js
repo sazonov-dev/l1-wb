@@ -1,10 +1,6 @@
 class Book {
-    constructor() {
-        this.book = { // Первичные состояние книги
-            title: 'Грокаем алгоритмы',
-            author: 'Бхаргава Адитья',
-            release: '2022'
-        }
+    constructor(book) {
+        this.book = book // Первичное состояние книги
     }
 
     getBookDetails() { // Получаем данные книги
@@ -27,7 +23,11 @@ class Book {
     }
 }
 
-const book = new Book();
+const book = new Book({
+    title: 'Грокаем алгоритмы',
+    author: 'Бхаргава Адитья',
+    release: '2022'
+}); // передаем книгу
 
 console.log(book.getBookDetails());
 book.setBookTitle('Привет')

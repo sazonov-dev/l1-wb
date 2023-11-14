@@ -1,4 +1,5 @@
 import './scss/styles.scss';
+const accessToken = 'свой аккес токен'; // для работы виджета необходимо добавить токен https://www.pandoge.com/socialnye-seti-i-messendzhery/poluchenie-klyucha-dostupa-access_token-dlya-api-vkontakte
 
 const initLocalStorage = () => { // инизиализируем локалсторейдж
     if (!localStorage.getItem('posts')) { // если постов нету, то создаем локалсторейдж
@@ -44,7 +45,6 @@ const scrolledContainerHandler = () => { // если скроллится до �
 
 // Получаем карточки с помощью протокола JSONP
 const fetchPosts = () => {
-    const accessToken = 'свой аккес токен';
     const postsLimit = 10;
     const offset = JSON.parse(localStorage.getItem('lastOffset'));
     const ownerId = JSON.parse(localStorage.getItem('publicId'));

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 30px;
+            position: relative;
+        }
+        form {
+            background-color: #e5e5e5;
+            padding: 30px;
+            border: 1px solid #000;
+            display: flex;
+            flex-direction: column;
+            max-width: 350px;
+            margin: 0 auto;
+        }
+
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            border: 1px solid #000;
+            padding: 100px;
+            border-radius: 24px;
+            z-index: 2;
+        }
+
+        .modal-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .modal__container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+    </style>
+    <form>
+        <input type="text" placeholder="Введите свое имя" id="name">
+        <input type="text" placeholder="Введите свою фамилию" id="surname">
+        <input type="email" placeholder="Введите свою почту" id="email">
+        <button type="submit">Показать данные</button>
+    </form>
+
+<template id="modal">
+    <div class="modal">
+        <div class="modal__container">
+            <p class="name"></p>
+            <p class="surname"></p>
+            <p class="email"></p>
+        </div>
+    </div>
+    <div class="modal-bg"></div>
+</template>
+    <script src="./index.js"></script>
+</body>
+</html>

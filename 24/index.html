@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+    .grid-line {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        padding: 50px;
+    }
+    .grid-line:nth-child(2n) {
+        background-color: #ececec;
+    }
+</style>
+    <button id="prev">Предыдущая страница</button>
+    <button id="next">Следующая страница</button>
+    <div class="grid">
+        <div class="grid-line" id="sort">
+            <div id="sort-container" data-id="fname">
+                <button id="asc">Сортировать по возрастанию</button>
+                <button id="desc">Сортировать по убыванию</button>
+            </div>
+            <div id="sort-container" data-id="lname">
+                <button id="asc">Сортировать по возрастанию</button>
+                <button id="desc">Сортировать по убыванию</button>
+            </div>
+            <div id="sort-container" data-id="tel">
+                <button id="asc">Сортировать по возрастанию</button>
+                <button id="desc">Сортировать по убыванию</button>
+            </div>
+            <div id="sort-container" data-id="address">
+                <button id="asc">Сортировать по возрастанию</button>
+                <button id="desc">Сортировать по убыванию</button>
+            </div>
+            <div id="sort-container" data-id="city">
+                <button id="asc">Сортировать по возрастанию</button>
+                <button id="desc">Сортировать по убыванию</button>
+            </div>
+            <div id="sort-container" data-id="state">
+                <button id="asc">Сортировать по возрастанию</button>
+                <button id="desc">Сортировать по убыванию</button>
+            </div>
+            <div id="sort-container" data-id="zip">
+                <button id="asc">Сортировать по возрастанию</button>
+                <button id="desc">Сортировать по убыванию</button>
+            </div>
+        </div>
+    </div>
+    <template id="table-line">
+        <div class="grid-line" id="card">
+            <p id="name"></p>
+            <p id="surname"></p>
+            <p id="tel"></p>
+            <p id="address"></p>
+            <p id="city"></p>
+            <p id="state"></p>
+            <p id="zip"></p>
+        </div>
+    </template>
+    <script src="./index.js"></script>
+</body>
+</html>
